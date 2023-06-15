@@ -1,10 +1,10 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  }
-  
-  body{
+}
+
+body {
 	background-image: url(..//assets/img/fondo-tienda.png);
 	background-color: #333333;
 	background-size: cover;
@@ -12,102 +12,102 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-  }
-  
-  /* ESTILOS DEL HEADER */
-  
-  header {
+}
+
+/* ESTILOS DEL HEADER */
+
+header {
 	background-color: yellow;
 	width: 100%;
 	padding: 10px;
-  }
-  
-  nav {
+}
+
+nav {
 	align-items: center;
 	display: flex;
 	justify-content: space-around;
-  }
-  
-  a {
+}
+
+a {
 	color: black;
 	text-decoration: none;
-  }
+}
 
- 
-  
-  /* ESTILOS DEL FOOTER */
-  
-  footer{
+/* ESTILOS DEL FOOTER */
+
+footer {
 	margin-top: auto;
 	text-align: center;
 	background-color: yellow;
 	color: black;
 	padding: 10px;
-  }
+}
 
-  /* ESTILOS DE LA TIENDA */
-  
-   .store-container {
+/* ESTILOS DE LA TIENDA */
+
+.store-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 20px;
 	max-width: 1200px;
 	margin: 0 auto;
-  } 
-  
-  .card-container {
+}
+
+.card-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-  }
-  
-  .card {
+}
+
+.card {
 	background-color: #fff;
 	border: 1px solid #ccc;
 	border-radius: 5%;
-	box-shadow: 2px 2px 5px rgba(0,0,0, 0.3);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 	transition: all 0.3s ease-in-out;
 	margin: 20px;
 	width: 300px;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
 	transform: translateY(-10px);
 	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-  }
-  .card:hover {
+}
+
+.card:hover {
 	background-color: #e6e6e6;
-  }
-  .card:hover {
+}
+
+.card:hover {
 	background-color: #e6e6e6;
 	transition: background-color 0.3s ease-in-out;
-  }
-  
-  .card img {
+}
+
+.card img {
 	width: 100%;
 	border-radius: 10px 10px 0 0;
-  }
-  
-  .card .content {
+}
+
+.card .content {
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  }
-  
-  .card h1 {
+}
+
+.card h1 {
 	font-size: 24px;
 	margin-top: 0;
-  }
-  
-  .card p {
+}
+
+.card p {
 	font-size: 16px;
 	text-align: center;
-  }
-  
-  .card button {
-	background-color: #007bff;
+}
+
+.btn-compra {
+	background-color: rgb(36, 194, 36);
 	border: none;
 	border-radius: 10px;
 	color: #fff;
@@ -116,198 +116,130 @@
 	padding: 10px 20px;
 	margin-top: 20px;
 	text-transform: uppercase;
-  }
-  
-  .card button:hover {
-	background-color: #0069d9;
-  }
-  
-  /* ESTILOS DE CONTACTO */
-  
-  .sec-inition {
-	padding: 40px;
-  }
-  
-  .contact-card {
-	background-color: #ffffff;
+}
+
+.btn-compra:hover {
+	background-color: blueviolet;
+}
+
+/* CARRITO */
+
+.container {
+	margin-left: 50px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 500px;
+	margin: 0 auto;
 	border-radius: 5px;
-	padding: 60px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	animation: bounce 1s ease-in-out infinite;
-  
+	margin-top: 20px;
+}
+
+th,
+td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+	background-color: lightblue;
+}
+
+th {
+	background-color: lightblue;
+}
+
+#total {
+	margin: 0 auto;
+	width: 500px;
+	color: black;
+	background-color: lightblue;
+}
+
+/* Estilos para el botón de eliminar */
+button {
+	background-color: black;
+	color: #fff;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
   }
   
-  .name {
-	font-size: 24px;
-	margin-bottom: 10px;
-  }
-  
-  .email,
-  .phone,
-  .whatsapp {
-	font-size: 18px;
-	margin-bottom: 10px;
-  }
-  
-  .email a {
-	color: #333333;
-	text-decoration: none;
-  }
-  
-  .phone a {
-	color: #333333;
-	text-decoration: none;
-  }
-  
-  .whatsapp a {
-	color: #25D366;
-	text-decoration: none;
-  }
-  
-  /* ESTILOS RESPONSIVE */
-  
-  /* MENU INCIO */
-  
-  @media(max-width:1024px){
+  button:hover {
+	background-color: red;
+  } 
+
+/* ESTILOS RESPONSIVE */
+
+/* MENU INCIO */
+
+@media(max-width:1024px) {
 	.sec-inition h1 {
-	  font-size: 4rem;
+		font-size: 4rem;
 	}
-	
+
 	.sec-inition h2 {
-	  font-size: 1.5rem;
+		font-size: 1.5rem;
 	}
-	
+
 	.button-inicio {
-	  font-size: 1rem;
+		font-size: 1rem;
 	}
-  
-	/* CONTACTO */
-  
-	.contact-card {
-	  padding: 40px;
-	}
-	
-	.name {
-	  font-size: 20px;
-	}
-	
-	.email,
-	.phone,
-	.whatsapp {
-	  font-size: 16px;
-	}
-  }
-  
-  @media(max-width:768px){
+}
+
+@media(max-width:768px) {
 	.sec-inition h1 {
-	  font-size: 4rem;
+		font-size: 4rem;
 	}
-	
+
 	.sec-inition h2 {
-	  font-size: 1.5rem;
+		font-size: 1.5rem;
 	}
-	
+
 	.button-inicio {
-	  font-size: 1rem;
+		font-size: 1rem;
 	}
-  
-	.contact-card {
-	  padding: 40px;
-	}
-	
-	.name {
-	  font-size: 20px;
-	}
-	
-	.email,
-	.phone,
-	.whatsapp {
-	  font-size: 16px;
-	}
-  }
-  
-  @media(max-width:425px){
+}
+
+@media(max-width:425px) {
 	.sec-inition h1 {
-	  font-size: 3rem;
+		font-size: 3rem;
 	}
-	
+
 	.sec-inition h2 {
-	  font-size: 1.2rem;
+		font-size: 1.2rem;
 	}
-	
+
 	.button-inicio {
-	  font-size: 0.8rem;
+		font-size: 0.8rem;
 	}
-  
-	.contact-card {
-	  padding: 20px;
-	}
-	
-	.name {
-	  font-size: 18px;
-	}
-	
-	.email,
-	.phone,
-	.whatsapp {
-	  font-size: 14px;
-	}
-  }
-  
-  @media(max-width:375px){
+}
+
+@media(max-width:375px) {
 	.sec-inition h1 {
-	  font-size: 2.5rem;
+		font-size: 2.5rem;
 	}
-	
+
 	.sec-inition h2 {
-	  font-size: 1rem;
+		font-size: 1rem;
 	}
-	
+
 	.button-inicio {
-	  font-size: 0.6rem;
+		font-size: 0.6rem;
 	}
-  
-	.contact-card {
-	  padding: 20px;
-	}
-	
-	.name {
-	  font-size: 16px;
-	}
-	
-	.email,
-	.phone,
-	.whatsapp {
-	  font-size: 12px;
-	}
-  }
-  
-  @media(max-width:320px){
+}
+
+@media(max-width:320px) {
 	.sec-inition h1 {
-	  font-size: 2rem;
+		font-size: 2rem;
 	}
-	
+
 	.sec-inition h2 {
-	  font-size: 0.8rem;
+		font-size: 0.8rem;
 	}
-	
+
 	.button-inicio {
-	  font-size: 0.5rem;
+		font-size: 0.5rem;
 	}
-	
-	/* CONTACTO */
-	.contact-card {
-	  padding: 10px;
-	}
-	
-	.name {
-	  font-size: 14px;
-	}
-	
-	.email,
-	.phone,
-	.whatsapp {
-	  font-size: 10px;
-	}
-  }
-  
+}
+
