@@ -16,101 +16,102 @@
 <body>
     <header>
         <nav>
-            <a href="./index.html">TIENDA-IMPORT</a>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <h1>TIENDA IMPORT</h1>
+            <div class="filtrados">
+                <div class="filtrado">
+                    <label for="marcar">Marca:</label>
+                    <select id="marcar">
+                        <option value="">Todas</option>
+                        <option value="asus">Asus</option>
+                        <option value="lenovo">Lenovo</option>
+                        <option value="apple">Apple</option>
+                        <option value="dell">Dell</option>
+                        <option value="acer">Acer</option>
+                        <option value="msi">MSI</option>
+                      </select>
+                </div>
+            </div>
+            <ul>
+                <li><a class="btn-carro" href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <div class="store-container">
             <div class="card-container">
-                <div class="card">
+                <div class="card" data-brand="asus" data-price="721100">
                     <div class="content">
-                        <h1> NOTEBOOK ASUS ULTRA OLED PANTALLA DE 15"</h1>
+                        <h1>NOTEBOOK ASUS ULTRA OLED PANTALLA DE 15"</h1>
                         <img src="./assets/img/asus-oled.png" alt="">
                         <p>Asus i7-12700h 16gb 512 SSD, Windows 11 <br>$721100</p>
-                        <button id="1" class="btn-compra">COMPRAR</button>
+                        <button id="1" class="btn-compra">Agregar al Carrito</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-brand="asus" data-price="400000">
                     <div class="content">
                         <h1>NOTEBOOK ASUS VIVOBOOK 15"</h1>
                         <img src="./assets/img/asus-vivobook.png" alt="">
                         <p>Intel core i5 1240p 8GB 256 SSD, Windows 11 <br>$400000</p>
-                        <button id="2" class="btn-compra">COMPRAR</button>
+                        <button id="2" class="btn-compra">Agregar al Carrito</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-brand="asus" data-price="620000">
                     <div class="content">
-                        <h1 class="h1">Asus ZenBook Pro Duo</h1>
+                        <h1 class="h1">ASUS ZENBOOK PRO DUO</h1>
                         <img src="./assets/img/asus-zenbook.png" alt="">
                         <p>Intel core i7 32GB 1TB SSD Nvidia GeForce MX450, Windows 11 Home <br>$620000 </p>
-                        <button id="3" class="btn-compra">COMPRAR</button>
+                        <button id="3" class="btn-compra">Agregar al Carrito</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-brand="lenovo" data-price="273999">
                     <div class="content">
                         <h1>NOOTEBOOK LENOVO V-SERIES V14-IIL</h1>
                         <img src="./assets/img/lenovo-doce.png" alt="">
                         <p>Lenovo Intel Core i3 8Gb 256SSD, Windows 10 pro <br>$273999</p>
-                        <button id="4" class="btn-compra">COMPRAR</button>
+                        <button id="4" class="btn-compra">Agregar al Carrito</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-brand="apple" data-price="1000000">
                     <div class="content">
                         <h1>APPLE MACBOOK PRO</h1>
                         <img src="./assets/img/macbook.png" alt="">
                         <p>13 Pulgadas, 2020 Chip m1, 8gb 256 SSD <br>$1000000</p>
-                        <button id="5" class="btn-compra">COMPRAR</button>
+                        <button id="5" class="btn-compra">Agregar al Carrito</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-brand="dell" data-price="500000">
                     <div class="content">
                         <h1>NOTEBOOK DELL INSPIRON MODELO 3515 </h1>
                         <img src="./assets/img/dell-inspiron.png" alt="">
                         <p>Ryzen 5 3459u, 16GB 256 SSD, Windows 11 Home <br>$500000 </p>
-                        <button id="6" class="btn-compra">COMPRAR</button>
+                        <button id="6" class="btn-compra">Agregar al Carrito</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-brand="acer" data-price="650000">
                     <div class="content">
                         <h1>ACER ASPIRE NITRO 5</h1>
                         <img src="./assets/img/acer-nitro.png" alt="">
                         <p>Intel core i5 8GB 256SSD, Windows 10 <br>$650000</p>
-                        <button id="7" class="btn-compra">COMPRAR</button>
+                        <button id="7" class="btn-compra">Agregar al Carrito</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-brand="msi" data-price="600000">
                     <div class="content">
                         <h1>NOTEBOOK MSI</h1>
                         <img src="./assets/img/msi.png" alt="">
                         <p>Intel core i7-10750h 8GB 512SSD, Wsindows 11 pro <br>$600000 </p>
-                        <button id="8" class="btn-compra">COMPRAR</button>
+                        <button id="8" class="btn-compra">Agregar al Carrito</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-brand="dell" data-price="2530873">
                     <div class="content">
                         <h1>DELL ALIENWARE </h1>
                         <img src="./assets/img/dell-alienware.png" alt="">
                         <p>Intel core i7 11800h 16GB 512SSD, Windows 10 Home <br>$2530873</p>
-                        <button id="9" class="btn-compra">COMPRAR</button>
+                        <button id="9" class="btn-compra">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Marca</th>
-                        <th>Modelo</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody id="tablabody">
-    
-                </tbody>
-            </table>
-            <h4 id="total">TOTAL A PAGAR $:</h2>
         </div>
     </main>
     <footer>
