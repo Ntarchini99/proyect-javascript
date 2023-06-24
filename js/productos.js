@@ -1,5 +1,4 @@
-
-/* Creo un array con objetos (notebooks en este caso)
+/* Creo un array con objetos (las notebooks)
 y les agrego el ID, su marca y modelo, su precio
 su almacenamiento y su memoria ram */
 

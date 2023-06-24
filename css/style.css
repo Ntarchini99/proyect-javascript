@@ -307,7 +307,7 @@ button:hover {
 	.card-container {
 		justify-content: flex-start;
 	}
-	
+
 	.card {
 		width: calc(50% - 40px);
 		margin: 20px 10px;
