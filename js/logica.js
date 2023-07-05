@@ -10,7 +10,7 @@ for (const boton of botones) {
 }
 
 function respuestaClick() {
-  const prodACarro = notebooks.find((producto) => producto.id == this.id);
+  const prodACarro = productos.find((producto) => producto.id == this.id);
   agregarACarrito(prodACarro);
 }
 
@@ -54,16 +54,16 @@ function actualizarTotalPrecio() {
   }
 }
 
-// Puse el windows add.eventlistener para que se reenderize el carrito cuando se cargue la pagina.
+// Puse el window add.eventlistener para que se reenderize el carrito cuando se cargue la pagina.
 window.addEventListener('DOMContentLoaded', function () {
-  renderizarCarrito();
+  obtenerJsonProds(); // aca cargue el archivo JSON de productos(me complico la vida)
 });
 
 if (btnFinalizar) {
   btnFinalizar.addEventListener('click', finalizarCompra);
 }
 
-// Cree una funcion para que cuando se finalize la compra se vacie el carrito y se guarde la iformacion de ese momento.
+// Cree una funcion para que cuando se finalize la compra se vacie el carrito y se guarde la info de ese momento.
 function finalizarCompra() {
 
   if (mensajeAgradecimiento) {
@@ -95,4 +95,13 @@ function filtrarPorMarca() {
       card.style.display = 'none';
     }
   }
+}
+
+async function obtenerJsonProds() {
+  const URLJSON = './productos.json';
+  const respuesta = await fetch(URLJSON);
+  const data = await respuesta.json();
+  productos = data;
+
+  renderizarCarrito();
 }
