@@ -4,6 +4,7 @@ const tablaBody = document.getElementById('tablabody');
 const btnFinalizar = document.getElementById('btn-finalizar');
 const mensajeAgradecimiento = document.getElementById('mensaje-agradecimiento');
 let totalPrecio = 0;
+let productos = [];
 
 for (const boton of botones) {
   boton.addEventListener('click', respuestaClick);
@@ -12,6 +13,13 @@ for (const boton of botones) {
 function respuestaClick() {
   const prodACarro = productos.find((producto) => producto.id == this.id);
   agregarACarrito(prodACarro);
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: '¡Producto agregado al carrito correctamente!',
+    showConfirmButton: false,
+    timer: 1500
+  });
 }
 
 function agregarACarrito(prodACarro) {
@@ -54,27 +62,26 @@ function actualizarTotalPrecio() {
   }
 }
 
-// Puse el window add.eventlistener para que se reenderize el carrito cuando se cargue la pagina.
 window.addEventListener('DOMContentLoaded', function () {
-  obtenerJsonProds(); // aca cargue el archivo JSON de productos(me complico la vida)
+  obtenerJsonProds();
 });
 
 if (btnFinalizar) {
   btnFinalizar.addEventListener('click', finalizarCompra);
 }
 
-// Cree una funcion para que cuando se finalize la compra se vacie el carrito y se guarde la info de ese momento.
 function finalizarCompra() {
-
-  if (mensajeAgradecimiento) {
-    mensajeAgradecimiento.textContent = '¡Muchas gracias por comprar en TIENDA IMPORT, lo esperamos nuevamente!';
-    mensajeAgradecimiento.style.display = 'block';
-  }
-
-  // elimina todo del carrito
-  carrito.length = 0;
-  localStorage.removeItem('carrito');
-  renderizarCarrito();
+  Swal.fire({
+    icon: 'success',
+    title: '¡Compra finalizada!',
+    text: '¡Muchas gracias por comprar en TIENDA IMPORT, lo esperamos nuevamente!',
+    showConfirmButton: false,
+    timer: 2000
+  }).then(() => {
+    carrito.length = 0;
+    localStorage.removeItem('carrito');
+    renderizarCarrito();
+  });
 }
 
 const selectMarca = document.getElementById('marcar');
@@ -103,5 +110,7 @@ async function obtenerJsonProds() {
   const data = await respuesta.json();
   productos = data;
 
-  renderizarCarrito();
+ renderizarCarrito();
 }
+
+
