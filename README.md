@@ -15,5 +15,6 @@ El proyecto contiene:
 Por ultimo, mi proyecto esta subido a mi repositorio de GitHub y alojado en un servidor gratuito llamado NETLIFY con un dominio personalizado, para simular una tienda mas real. 
 COMISION 43100. 🏪👩‍💻
 
-![tienda-import.png](https://i.postimg.cc/Wzp3Yd66/tienda-import.png)
-![mobile.jpg](https://i.postimg.cc/sDXPvxdh/mobile.jpg)
+[![tienda-import.png](https://i.postimg.cc/Wzp3Yd66/tienda-import.png)](https://postimg.cc/hzwcfPYf)
+
+[![mobile.jpg](https://i.postimg.cc/sDXPvxdh/mobile.jpg)](https://postimg.cc/QV2KzXM8)
