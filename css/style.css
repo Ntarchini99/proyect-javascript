@@ -301,6 +301,14 @@ button:hover {
 	background-color: rgb(97, 5, 5);
 }
 
+select {
+	font-weight: bold;
+	font-size: 16px;
+	color: #333;
+	border-radius: 20px;
+  }
+  
+
 /* ESTILOS RESPONSIVE DE 1024 a 320 */
 
 @media (max-width: 1024px) {

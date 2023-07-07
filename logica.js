@@ -15,8 +15,8 @@ function respuestaClick() {
   agregarACarrito(prodACarro);
   Swal.fire({
     position: 'top-end',
-    icon: 'success',
-    title: '¡Producto agregado al carrito correctamente!',
+    icon: 'info',
+    title: '¡Producto agregado al carrito!',
     showConfirmButton: false,
     timer: 1500
   });
@@ -26,6 +26,7 @@ function agregarACarrito(prodACarro) {
   carrito.push(prodACarro);
   localStorage.setItem('carrito', JSON.stringify(carrito));
   renderizarCarrito();
+  actualizarCantidadCarrito(); 
 }
 
 function renderizarCarrito() {
@@ -52,6 +53,7 @@ function eliminarDelCarrito(indice) {
   carrito.splice(indice, 1);
   localStorage.setItem('carrito', JSON.stringify(carrito));
   renderizarCarrito();
+  actualizarCantidadCarrito(); 
 }
 
 function actualizarTotalPrecio() {
@@ -70,17 +72,21 @@ if (btnFinalizar) {
   btnFinalizar.addEventListener('click', finalizarCompra);
 }
 
+/*Cree la funcion para que cuando se realie la compra aparezca el mensaje de agradecimiento 
+y se elimine lo que esta en el carrito */
+
 function finalizarCompra() {
   Swal.fire({
     icon: 'success',
     title: '¡Compra finalizada!',
     text: '¡Muchas gracias por comprar en TIENDA IMPORT, lo esperamos nuevamente!',
     showConfirmButton: false,
-    timer: 2000
+    timer: 2500
   }).then(() => {
     carrito.length = 0;
     localStorage.removeItem('carrito');
     renderizarCarrito();
+    actualizarCantidadCarrito(); 
   });
 }
 
@@ -88,6 +94,11 @@ const selectMarca = document.getElementById('marcar');
 if (selectMarca) {
   selectMarca.addEventListener('change', filtrarPorMarca);
 }
+
+/* Aca le agregue el atributo data a las cards para
+poder filtrarlas por su marca y despues con las condicionales
+hice que cuando haga click en una marca aparezca esa ( display block )y se oculten las 
+que no son de esa marca (display nnone) */
 
 function filtrarPorMarca() {
   const marcaSeleccionada = selectMarca.value;
@@ -110,7 +121,16 @@ async function obtenerJsonProds() {
   const data = await respuesta.json();
   productos = data;
 
- renderizarCarrito();
+  renderizarCarrito();
+  actualizarCantidadCarrito(); 
 }
+/* Esta es la funcion para actualizar el numero de las cosas 
+que agrego al carro que esta al lado del icono en el HTML */
 
+function actualizarCantidadCarrito() {
+  const cantidadCarrito = document.getElementById('cantidad-carrito');
+  if (cantidadCarrito) {
+    cantidadCarrito.textContent = '' + carrito.length;
+  }
+}
 
